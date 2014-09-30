@@ -15,6 +15,12 @@ class VisitorsController extends AppController {
 		$this->set('personall', $this->Visitor->find('all'));
 	}
 	
+	public function registered() {
+		$this->Visitor->findAllByIn('1');
+		$this->set('visitors', $this->paginate());
+		$this->set('personall', $this->Visitor->find('all'));
+	}
+	
 	public function view($id) {
 		if (!($visitor = $this->Visitor->findById($id))) {
 			throw new NotFoundException(__('Visitor not found'));
