@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2014 at 03:38 AM
+-- Generation Time: Oct 01, 2014 at 12:06 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `visitors` (
   `id` varchar(36) NOT NULL,
-  `lastname` varchar(20) NOT NULL,
-  `firstname` varchar(20) NOT NULL,
-  `rankcode` varchar(20) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `in` tinyint(1) NOT NULL,
+  `lastname` varchar(20) DEFAULT NULL,
+  `firstname` varchar(20) DEFAULT NULL,
+  `rankcode` varchar(20) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `in` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `lastname`, `firstname`, `rankcode`, `address`, `in`, `created`, `modified`) VALUES
-('691d86f2-479b-11e4-8939-164230d1df67', 'ABANTAO', 'JOHN', 'CHOFF4', 'STA ANA AVE., STA ROSA SUBD', 0, '0000-00-00 00:00:00', '2014-09-30 03:36:32'),
+('691d86f2-479b-11e4-8939-164230d1df67', 'ABANTAO', 'JOHN', 'CHOFF4', 'STA ANA AVE., STA ROSA SUBD', 0, '0000-00-00 00:00:00', '2014-09-29 15:35:29'),
 ('691d8a3a-479b-11e4-8939-164230d1df67', 'ABLAO', 'JL MICHAEL', 'BOY', 'ARNALDO BLVD. ROXAS CITY', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691d8c7e-479b-11e4-8939-164230d1df67', 'ABONG', 'NELSON JR', 'DECK CDT', 'LOPEZ SUBD.,GEN MC ARTHUR ST, VICTORIAS CITY, ', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691d90b6-479b-11e4-8939-164230d1df67', 'ABUNYAWAN', 'JOEVEN', 'O.SEAMAN', '29-K MAGDALO ST. LA PAZ ILOILO', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -298,7 +298,7 @@ INSERT INTO `visitors` (`id`, `lastname`, `firstname`, `rankcode`, `address`, `i
 ('691f6788-479b-11e4-8939-164230d1df67', 'MASCUÑANA', 'MARK', '4ENGR TR', 'P3 BRGY HANDUMAN BACOLOD CITY NEGROS OCCIDENTAL', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691f68b4-479b-11e4-8939-164230d1df67', 'MENDOZA', 'ROLLEN', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691f69d6-479b-11e4-8939-164230d1df67', 'MENOSA', 'JONATHAN', '2ND COOK', 'BLK2 LOT12 GLORVILLE SUBD VICT', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-('691f6aee-479b-11e4-8939-164230d1df67', 'MIRASOL', 'JOSE MARIA BAYANI JR', 'E.CADET', 'M.LOCSIN ST.MOLO ILOILO CITY', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+('691f6aee-479b-11e4-8939-164230d1df67', 'MIRASOL', 'JOSE MARIA BAYANI JR', 'E.CADET', 'M.LOCSIN ST.MOLO ILOILO CITY', 0, '0000-00-00 00:00:00', '2014-09-29 15:44:15'),
 ('691f6c06-479b-11e4-8939-164230d1df67', 'MODAYNO', 'JUVEL', '3OFF', 'LOPUE''S VILLAGE BRGY ESTEFANIA BACOLOD CITY NEGROS', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691f6dfa-479b-11e4-8939-164230d1df67', 'MONDIA', 'RYAN KEVIN', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 ('691f6f26-479b-11e4-8939-164230d1df67', 'MONTAÑO', 'ALEX', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
